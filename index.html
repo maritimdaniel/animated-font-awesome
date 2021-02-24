@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animated font awesome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <style>
+        .fa{
+            display: block;
+            min-height: 20vh;
+            max-width: 30vw;
+            margin: 3em auto;
+            font-size:4rem;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="fa">
+        <div class="battery"></div>
+        <div class="hourglass"></div>
+    </div>
+</body>
+<script>
+    const battery = document.querySelector(".battery");
+    const hourglass = document.querySelector(".hourglass");
+
+    function batteryCharged(){
+        setTimeout(function(){
+            battery.innerHTML = "&#xf244";
+            battery.style.color = "red";
+        },1000);
+        setTimeout(function(){
+            battery.innerHTML = "&#xf243";
+            battery.style.color = "red"
+        },2000);
+        setTimeout(function(){
+            battery.innerHTML = "&#xf242";
+            battery.style.color = "black";
+        },3000);
+        setTimeout(function(){
+            battery.innerHTML = "&#xf241";
+            battery.style.color = "black";
+
+        },4000);
+        setTimeout(function(){
+            battery.innerHTML = "&#xf240";
+            battery.style.color = "black";
+        },5000)
+        
+    }
+    batteryCharged();
+    setInterval(batteryCharged,5000)
+
+    function hourglassTimer(){
+        setTimeout(function(){
+            hourglass.innerHTML = "&#xf251";
+           
+        },1000);
+        setTimeout(function(){
+            hourglass.innerHTML = "&#xf252";
+           
+        },2000);
+        setTimeout(function(){
+            hourglass.innerHTML = "&#xf253";
+            
+        },3000);
+        
+        
+    }
+    hourglassTimer();
+    setInterval(hourglassTimer,3000)
+</script>
+</html>
